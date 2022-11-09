@@ -1,5 +1,4 @@
 from pathlib import Path
-
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,7 +7,6 @@ from tqdm import tqdm
 IMAGES_PATH = Path('./data/UCM/Images')
 
 sift = cv2.SIFT_create(contrastThreshold=0.055)
-
 
 def dataloader(path):
     for image_file in path.rglob('*.tif'):
@@ -29,7 +27,6 @@ def compute_all_descriptors():
     return descriptors_list, idx_to_file_path
     # descriptors: [descriptors_of_img1, descriptors_of_img2,...]
     # idx_to_file_path: {0:'1.tif', 1:'2.tif',...}
-
 
 descriptors_list, idx_to_file = compute_all_descriptors()
 all_descriptors = tuple(des for des in descriptors_list if des is not None)
