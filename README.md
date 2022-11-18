@@ -1,7 +1,5 @@
 # Active Learning for Remote Sensing Image Retrieval
-Unofficial implementation of paper [A Novel Active Learning Method in Relevance
-Feedback for Content-Based Remote
-Sensing Image Retrieval](https://ieeexplore.ieee.org/document/6920022/)
+Official implementation of paper [Query By Example in Remote Sensing Image Archive Using Enhanced Deep Support Vector Data Description](https://ieeexplore.ieee.org/document/6920022/)
 <img src="./block_diagram_of_AL_method.png"/>
 
 ## Usage
