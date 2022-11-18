@@ -9,7 +9,7 @@ IMAGES_PATH = Path('./data/UCM/Images')
 sift = cv2.SIFT_create(contrastThreshold=0.055)
 
 def dataloader(path):
-    for image_file in path.rglob('*.tif'):
+    for image_file in path.rglob('*.jpg'): #.tif
         img = cv2.imread(str(image_file), 1)
         # img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         _, descriptors = sift.detectAndCompute(img, None)
