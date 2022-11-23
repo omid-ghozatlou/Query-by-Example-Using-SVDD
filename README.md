@@ -1,4 +1,4 @@
-# Active Learning for Remote Sensing Image Retrieval
+# Remote Sensing Image Retrieval Using Enhanced Deep SVDD
 Official implementation of paper [Query By Example in Remote Sensing Image Archive Using Enhanced Deep Support Vector Data Description](https://ieeexplore.ieee.org/document/6920022/)
 <img src="./block_diagram_of_AL_method.png"/>
 
