@@ -72,6 +72,7 @@ em=np.reshape(embeding,(len(target_arr),128))
 emb=np.concatenate((C,em), axis=0)
 # Create a two dimensional t-SNE projection of the embeddings
 tsne = TSNE(2, verbose=1, random_state=1)
+# tsne = TSNE(3, verbose=1, random_state=1) # 3D projection
 tsne_proj = tsne.fit_transform(emb)
 tsne_c = tsne_proj[0]
 tsne_proj = np.delete(tsne_proj, 0, 0)
