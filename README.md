@@ -1,5 +1,5 @@
 # Remote Sensing Image Retrieval Using Enhanced Deep SVDD
-Official implementation of paper [Query By Example in Remote Sensing Image Archive Using Enhanced Deep Support Vector Data Description](https://ieeexplore.ieee.org/document/6920022/)
+Official implementation of paper [Query By Example in Remote Sensing Image Archive Using Enhanced Deep Support Vector Data Description](https://ieeexplore.ieee.org/abstract/document/10003647)
 <img src="./IEEEJSTARS1.png"/>
 
 ## Usage
