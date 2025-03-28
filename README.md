@@ -13,7 +13,7 @@ This repository contains the implementation of an enhanced Deep Support Vector D
 - Enhanced Deep SVDD implementation for remote sensing image retrieval
 - Split Transform Network architecture
 - Gabor Convolutional Attention ResNet
-- TCAL (Transfer Learning with Convolutional Attention Learning) framework
+- TCAL (Triple Criteria Active Learning) framework
 - Comprehensive evaluation metrics
 - Visualization tools including t-SNE and histogram analysis
 
@@ -22,7 +22,7 @@ This repository contains the implementation of an enhanced Deep Support Vector D
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/Query-by-Example-Using-SVDD.git
+git clone https://github.com/omid-ghozatlou/Query-by-Example-Using-SVDD.git
 cd Query-by-Example-Using-SVDD
 ```
 
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 └── Split_Transform_Network.py # Split Transform Network
 ```
 
-## Usage
+## Usage baseline TCAL
 
 [![Open TCAL in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1O1rVIDR6gsheBJq3s4M-D_stOiWYGSvb?usp=sharing)
 
@@ -79,13 +79,16 @@ results = model.retrieve(query_image)
 If you use this code in your research, please cite our paper:
 
 ```bibtex
-@article{ghozatlou2023query,
-  title={Query By Example in Remote Sensing Image Archive Using Enhanced Deep Support Vector Data Description},
-  author={Ghozatlou, Omid and Ghassemian, Hassan},
-  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+@ARTICLE{10003647,
+  author={Ghozatlou, Omid and Conde, Miguel Heredia and Datcu, Mihai},
+  journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 
+  title={Query by Example in Remote Sensing Image Archive Using Enhanced Deep Support Vector Data Description}, 
   year={2023},
-  publisher={IEEE}
-}
+  volume={16},
+  number={},
+  pages={1197-1210},
+  keywords={Image retrieval;Feature extraction;Training;Earth;Deep learning;Data models;Big Data;Deep neural network (DNN);deep support vector data description (SVDD);EuroSAT;one-class classification;query by example in earth observation;remote sensing (RS) image retrieval},
+  doi={10.1109/JSTARS.2022.3233105}}
 ```
 
 ## License
