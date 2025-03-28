@@ -51,9 +51,7 @@ import numpy as np
               help='Number of workers for data loading. 0 means that the data will be loaded in the main process.')
 @click.option('--normal_class', type=int, default=8,
               help='Specify the normal class of the dataset (all other classes are considered anomalous).')
-# xp_path='D:/Omid/Galaxy Classification Master/imgs/EuroSAT/0'
-# train_test_data_path='D:/Omid/Galaxy Classification Master/data/train.csv'
-# apply_model_data_path='D:/Omid/Galaxy Classification Master/data/test.csv'
+
 def experiment(dataset_name, net_name, xp_path, data_path, train_path, test_path, load_config, load_model, objective, nu, device, seed,
          optimizer_name, lr, n_epochs, lr_milestone, batch_size, weight_decay, pretrain, ae_optimizer_name, ae_lr,
          ae_n_epochs, ae_lr_milestone, ae_batch_size, ae_weight_decay, n_jobs_dataloader, normal_class):
@@ -61,10 +59,6 @@ def experiment(dataset_name, net_name, xp_path, data_path, train_path, test_path
     exps = range(0,21)
     seeds = range(1, seed)
     for n in exps:
-        
-        # exp_folder = str(exp) + 'vsall'
-        # aucs = np.zeros(seed, dtype=np.float32)
-        # aucs = []
         for seed in seeds:
             path = xp_path + '/' + str(n) + '/' + str(seed)+'/'
             load_model = xp_path + '/' + str(n) + '/' + str(seed)+'/model.tar'
@@ -72,15 +66,7 @@ def experiment(dataset_name, net_name, xp_path, data_path, train_path, test_path
             script.main(dataset_name, net_name, path, data_path, train_path, test_path, load_config, load_model, objective, nu, device, seed,
                   optimizer_name, lr, n_epochs, lr_milestone, batch_size, weight_decay, pretrain, ae_optimizer_name, ae_lr,
                   ae_n_epochs, ae_lr_milestone, ae_batch_size, ae_weight_decay, n_jobs_dataloader, n)
-        # pretrain=False
-        # for seed in seeds:
-        #     path = xp_path + '/test/' + str(n) + '/'
-        #     load_model_path = xp_path + '/' + str(n) + '/' + str(seed)+'/model.tar'
-        #     os.makedirs(path,exist_ok = True)
-        #     script.main(dataset_name, net_name, path, data_path, train_path, test_path, load_config, load_model_path, objective, nu, device, seed,
-        #           optimizer_name, lr, n_epochs, lr_milestone, batch_size, weight_decay, pretrain, ae_optimizer_name, ae_lr,
-        #           ae_n_epochs, ae_lr_milestone, ae_batch_size, ae_weight_decay, n_jobs_dataloader, n)
-                  
+
 
 if __name__ == '__main__':
     experiment()        
