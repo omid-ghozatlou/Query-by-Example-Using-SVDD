@@ -131,7 +131,6 @@ class DeepSVDD(object):
     def save_ae_model(self, export_model, save_ae=True):
         """Save Deep SVDD model to export_model."""
 
-        # net_dict = self.net.state_dict()
         ae_net_dict = self.ae_net.state_dict()
 
         torch.save({'R': self.R,
@@ -145,8 +144,6 @@ class DeepSVDD(object):
 
         self.R = model_dict['R']
         self.c = model_dict['c']
-        # np.save("D:/Omid/Deep-SVDD\imgs\EuroSAT/MS/b100/c.npy",  np.array(self.c))
-        # print(self.c)
         self.net.load_state_dict(model_dict['net_dict'])
         if load_ae:
             if self.ae_net is None:
@@ -160,13 +157,11 @@ class DeepSVDD(object):
 
         self.R = model_dict['R']
         self.c = model_dict['c']
-        # print('center %s'%self.c[0])
         self.ae_net.load_state_dict(model_dict['ae_net_dict'])
-        # self.net.load_state_dict(model_dict['net_dict'])
-        # if load_ae:
-        #     if self.ae_net is None:
-        #         self.ae_net = build_autoencoder(self.net_name)
-        #     self.ae_net.load_state_dict(model_dict['ae_net_dict'])
+        if load_ae:
+            if self.ae_net is None:
+                self.ae_net = build_autoencoder(self.net_name)
+            self.ae_net.load_state_dict(model_dict['ae_net_dict'])
 
     def save_results(self, export_json):
         """Save results dict to a JSON-file."""
