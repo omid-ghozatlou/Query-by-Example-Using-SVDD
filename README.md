@@ -2,7 +2,7 @@
 
 Official implementation of paper [Query By Example in Remote Sensing Image Archive Using Enhanced Deep Support Vector Data Description](https://ieeexplore.ieee.org/abstract/document/10003647)
 
-<img src="./IEEEJSTARS1.png"/>
+<img src="./Enhanced Deep SVDD - visual.png"/>
 
 ## Overview
 
@@ -16,6 +16,9 @@ This repository contains the implementation of an enhanced Deep Support Vector D
 - TCAL (Triple Criteria Active Learning) framework
 - Comprehensive evaluation metrics
 - Visualization tools including t-SNE and histogram analysis
+
+## Methodology
+<img src="./IEEEJSTARS1.png"/>
 
 ## Installation
 
